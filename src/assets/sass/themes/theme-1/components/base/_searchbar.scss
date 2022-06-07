@@ -1,0 +1,21 @@
+$searchbar-margin: 3px;
+
+.searchbar {
+  margin-bottom: -#{$searchbar-margin};
+}
+
+.searchbar__item {
+  margin-bottom: $searchbar-margin;
+
+  &:not(:last-child) {
+    margin-right: $searchbar-margin;
+  }
+
+  &.searchbar__item--filterby {
+    width: 100px;
+  }
+
+  &.searchbar__item--dateBy {
+    width: 130px;
+  }
+}

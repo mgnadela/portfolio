@@ -1,0 +1,252 @@
+$MAIN-PATH: '../../..';
+
+$FMAIN: (
+  'Open Sans',
+  sans-serif
+);
+
+$FMAINKR: (
+  'NotoSansKR',
+  'Noto Sans KR',
+  sans-serif
+);
+
+$THEME-NAME: 'theme-1';
+
+$THEME-base-footer: 0;
+
+$THEME-base-color: #616161;
+$THEME-base-accent1: #1b6470;
+$THEME-base-accent: #4294a2;
+
+$THEME-base-bg: #f5f5f5;
+
+/*
+ * hamburger
+ */
+$THEME-hamburger-bg: $THEME-base-color;
+
+/*
+ * table | gamelist
+ */
+$THEME-table-head-bg: #fefefe;
+$THEME-table-head-border: $THEME-base-bg;
+$THEME-table-head-tx: #848484;
+$THEME-table-head-font-size: 12px;
+
+$THEME-table-title: #737d94;
+$THEME-table-border: 0;
+$THEME-table-body-bg: #fefefe;
+$THEME-table-body-hover-bg: $THEME-table-body-bg;
+$THEME-table-body-border: $THEME-base-bg;
+$THEME-table-body-tx: lighten($THEME-base-color, 2%);
+$THEME-table-body-font-size: 11px;
+
+$THEME-table-body-even-bg: #fefefe;
+$THEME-table-body-even-hover-bg: $THEME-table-body-even-bg;
+$THEME-table-body-even-border: $THEME-base-bg;
+$THEME-table-body-even-tx: $THEME-base-color;
+
+$THEME-table-odds-tx: #ffa500;
+$THEME-table-locked-tx: #ffa500;
+$THEME-table-count-tx: #8fff52;
+
+$THEME-gamelist-bettable-bg: linear-gradient(to top, #222, #373737);
+$THEME-table-bettable-bg-hover: linear-gradient(to top, #262626, #636363);
+$THEME-table-bettable-tx-hover: #fff;
+$THEME-table-bettable-bg-active: #d4991b;
+$THEME-table-bettable-tx-active: #000;
+$THEME-table-bettable-win-bg: #d4991b;
+$THEME-table-bettable-win-tx: #fff;
+
+$THEME-table-selected-row: #444;
+$THEME-table-footer: rgba(#000, 0);
+
+/*
+ * checkbox
+ */
+$THEME-checkbox-bg: #e9ecf0;
+$THEME-checkbox-width: 15px;
+$THEME-checkbox-height: 15px;
+
+$THEME-checkbox-check: $THEME-base-accent;
+$THEME-checkbox-check-width: 5px;
+$THEME-checkbox-check-height: 9px;
+
+$THEME-checkbox-border: #d7dbdf;
+$THEME-checkbox-border-width: 2px;
+
+/*
+ * toggle
+ */
+$THEME-toggle-active-bg: #8dc285;
+$THEME-toggle-active-circle-bg: #608f5a;
+$THEME-toggle-active-circle-border: #8dc285;
+
+$THEME-toggle-inactive-bg: #c6c6c6;
+$THEME-toggle-inactive-circle-bg: #898989;
+$THEME-toggle-inactive-circle-border: #c6c6c6;
+
+/*
+ * pagination
+ */
+$THEME-pagination-bg: #c9dee1;
+$THEME-pagination-bg-hover: #b2c5c8;
+$THEME-pagination-bg-active: $THEME-base-accent;
+
+$THEME-pagination-text: $THEME-base-accent;
+$THEME-pagination-text-hover: #fff;
+$THEME-pagination-text-active: #fff;
+
+$THEME-pagination-modal-bg: #343844;
+$THEME-pagination-modal-tx: $THEME-pagination-text;
+
+/*
+ * sort
+ */
+$THEME-sort-bg: #757575;
+$THEME-sort-bg-active: $THEME-base-accent;
+
+/*
+ * quill
+ */
+$THEME-quill-editor-bg: #e6e6e6;
+$THEME-quill-editor-text: $THEME-base-color;
+$THEME-quill-tooltips: $THEME-base-color;
+$THEME-quill-blank: $THEME-base-color;
+$THEME-quill-picker: #fff;
+$THEME-quill-toolbar-bg: #d8d8d8;
+$THEME-quill-toolbar-border: #d8d8d8;
+$THEME-quill-container-bg: #fff;
+$THEME-quill-container-border: #d8d8d8;
+
+/*
+ * select
+ */
+$THEME-select-bg: #fff;
+$THEME-select-border: #e6e6e6;
+$THEME-select-tx: inherit;
+$THEME-select-arrow: $THEME-base-color;
+$THEME-select-reset: #b52b2b;
+$THEME-select-minheight: 26px;
+$THEME-select-fz: 11px;
+$THEME-select-transform: uppercase;
+$THEME-select-width: calc(100% - 30px);
+$THEME-select-maxheight: 140px;
+
+/*
+ * form list
+ */
+$THEME-form-list-head-bg: #efefef;
+$THEME-form-list-head-border: 1px solid #d3d3d3;
+$THEME-form-list-head-radius: 5px;
+
+/*
+ * input
+ */
+$THEME-input-bg: #fff;
+$THEME-input-border: #e6e6e6;
+$THEME-input-tx: $THEME-base-color;
+$THEME-input-icon: $THEME-base-color;
+$THEME-input-reset: #880400;
+
+$THEME-input-arrows: #d0d6df;
+$THEME-input-arrows-active: darken($THEME-input-arrows, 5%);
+
+$THEME-input-ticker: #d0d6df;
+$THEME-input-ticker-active: darken($THEME-input-ticker, 5%);
+
+/*
+ * tag-input
+ */
+$THEME-tag-bg: #d8d8d8;
+$THEME-tag-bg-hover: darken($THEME-tag-bg, 5%);
+$THEME-tag-border: solid 1px #c1c1c1;
+
+/*
+ * attach-image
+ */
+$THEME-attach-image-tx: #5d6573;
+$THEME-attach-image-tx-hover: #6d7686;
+$THEME-attach-border: #6d7686;
+$THEME-attach-border-hover: #6d7686;
+
+$THEME-attach-bg: #e5e5e5;
+$THEME-attach-bg-border: #bdbdbd;
+
+/*
+ * tooltip
+ */
+$THEME-tooltip-bg: $THEME-base-accent;
+$THEME-tooltip-tx: #14151e;
+
+/*
+ * scroll
+ */
+$THEME-scroll-track: #fff;
+$THEME-scroll-thumb: $THEME-base-accent;
+
+/*
+ * check-data-list
+ */
+$THEME-empty-list-tx: #9a9aad;
+$THEME-loader-border: #fff;
+$THEME-loader-border-size: 5px;
+$THEME-loader-border-top: rgba(0, 0, 0, 0.3);
+
+/*
+ * accordion
+ */
+$THEME-accordion-head-bg: #fff;
+$THEME-accordion-head-tx: $THEME-base-color;
+$THEME-accordion-head-bg-hover: #fff;
+$THEME-accordion-head-tx-hover: $THEME-base-color;
+$THEME-accordion-head-open-bg: $THEME-base-color;
+$THEME-accordion-head-open-tx: #fff;
+$THEME-accordion-arr: #ddd;
+$THEME-accordion-body-bg: #f5f5f5;
+$THEME-accordion-body-tx: $THEME-base-color;
+
+/*
+ * input-suggestion
+ */
+$THEME-input-suggestion-width: 130px;
+$THEME-input-suggestion-bg: #f7f7f7;
+$THEME-input-suggestion-bg-active: darken($THEME-input-suggestion-bg, 3%);
+$THEME-input-suggestion-border: #d8d8d8;
+$THEME-input-suggestion-reset: #631314;
+
+/*
+ * modal
+ */
+$THEME-modal-backdrop: rgba(#000, 0.6);
+$THEME-modal-radius: 30px;
+$THEME-modal-bg: #ffffff;
+$THEME-modal-border: #e2e2e2;
+$THEME-modal-title-tx: $THEME-base-color;
+$THEME-modal-shadow: 20px 20px 30px rgba(#000, 0.50);
+
+$THEME-modal-head-height: 40px;
+$THEME-modal-head-padding: 0;
+
+/*
+ * swal
+ */
+$THEME-swal-backdrop: rgba(14, 20, 27, 0.8);
+$THEME-swal-radius: 30px;
+$THEME-swal-bg: #1a1b25;
+$THEME-swal-border: solid 1px #1a1b25;
+
+$THEME-swal-title-tx: $THEME-base-color;
+$THEME-swal-body-tx: $THEME-base-color;
+
+$THEME-swal-confirm-bg: #86e547;
+$THEME-swal-confirm-tx: #202430;
+
+$THEME-swal-cancel-bg: $THEME-base-color;
+$THEME-swal-cancel-tx: #202430;
+
+$THEME-swal-promp-tx: #f2713f;
+$THEME-swal-error-tx: #ec3d42;
+$THEME-swal-success-tx: #86e547;
+$THEME-swal-warning-tx: #d6ac35;

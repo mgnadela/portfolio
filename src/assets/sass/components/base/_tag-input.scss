@@ -1,0 +1,45 @@
+.tag-input {
+  background-color: $THEME-input-bg;
+  border: 1px solid $THEME-input-border;
+  color: $THEME-input-tx;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px 5px 0;
+
+  input {
+    box-shadow: initial !important;
+    border: 0;
+    outline: 0;
+    flex: 1 1 auto;
+    min-height: 26px;
+  }
+}
+
+.tag-input-item {
+  background-color: $THEME-tag-bg;
+  border-radius: 3px;
+  border: $THEME-tag-border;
+  margin-bottom: 5px;
+  padding: 5px;
+
+  @include breakpoint(hoverable) {
+    background-color: $THEME-tag-bg-hover;
+  }
+
+  &:not(:last-child) {
+    margin-right: 5px;
+  }
+
+  .ico-close {
+    line-height: 0;
+    width: 16px;
+
+    &:before {
+      transform: scale(0.4);
+    }
+
+    @include breakpoint(hoverable) {
+      color: $THEME-input-reset;
+    }
+  }
+}

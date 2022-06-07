@@ -1,0 +1,29 @@
+$BASE-FONTSIZE: 14px !default;
+$BASE-MAXWIDTH: 2000px !default;
+$MAIN-PATH: "../..";
+
+$lato: 'Lato';
+$latoHairline: 'Lato Hairline';
+$natoSerif: 'Noto Serif Extra Condensed';
+
+$main-width: 90%;
+$main-max-width: 1600px;
+
+$transparent: rgba(0, 0, 0, 0);
+
+$FSTACK: (
+  'Gotham Book',
+  'Lato',
+  'Open Sans',
+  sans-serif
+);
+
+$FMAIN: $FSTACK;
+$FDATETIME: (
+  'Lato',
+  'Open Sans',
+  sans-serif
+);
+
+$IMAGE_PATH: '../images';
+$transparent: rgba(#000, 0);

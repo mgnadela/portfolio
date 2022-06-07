@@ -1,0 +1,193 @@
+$SELECT-transform: uppercase;
+$SELECT-width: calc(100% - 30px);
+
+.select-list {
+  @include wh(100%, auto);
+  @include vm(inline-block);
+  -webkit-touch-callout: none;
+  align-items: center;
+  background-color: $THEME-select-bg;
+  border: 1px solid $THEME-select-border;
+  color: $THEME-select-tx;
+  cursor: pointer;
+  display: block;
+  font-size: $THEME-select-fz;
+  min-height: $THEME-select-minheight;
+  min-width: $THEME-select-width;
+  padding: 0;
+  position: relative;
+  text-align: left;
+  vertical-align: middle;
+
+  &.is-open {
+    .ico-arrow-line {
+      transform: translateY(-20%) rotate(180deg);
+    }
+  }
+
+  > select {
+    appearance: none;
+    background-color: inherit;
+    border: none;
+    color: inherit;
+    font-size: $THEME-select-fz + 2;
+    min-height: inherit;
+    opacity: 0;
+    outline: none;
+    outline: none;
+    padding: 5px 5px;
+    width: 100%;
+    word-wrap: break-word;
+  }
+
+  span {
+    @extend %no-flicker;
+    @include vm(absolute, 50%);
+    left: 0;
+    padding-left: 5px;
+    text-transform: $THEME-select-transform;
+    width: $THEME-select-width;
+    word-wrap: break-word;
+  }
+
+  .ico-arrow-line {
+    @include absolute(12px, 5px);
+    font-size: 8px;
+    font-weight: bold;
+    margin-top: 0;
+    opacity: 0.9;
+    pointer-events: none;
+    transform-origin: center;
+    transition: transform 0.2s linear;
+  }
+
+  .ico-reset-data {
+    @include absolute(10px, 20px);
+    color: $THEME-select-reset;
+    font-weight: bold;
+  }
+}
+
+.select-dd {
+  @include wh(100%, auto);
+  @include vm(inline-block);
+  -webkit-touch-callout: none;
+  cursor: pointer;
+  font-size: 12px;
+  min-height: 25px;
+  position: relative;
+  text-align: left;
+  vertical-align: middle;
+
+  .browser-ie & {
+    height: 25px;
+  }
+}
+
+.select-dd--lbl {
+  @include wh(100%, 100%);
+  border: 1px solid $transparent;
+  cursor: pointer;
+  display: block;
+  min-height: inherit;
+  padding: 0;
+  pointer-events: none;
+  position: relative;
+  text-align: left;
+
+  .browser-ie & {
+    height: inherit;
+  }
+
+  .is-open & {
+    .ico-arr-down {
+      transform: translateY(-20%) rotate(180deg);
+    }
+  }
+
+  .ico-arr-down {
+    font-size: 10px;
+    font-weight: bold;
+    margin-top: 0;
+    pointer-events: none;
+    transform-origin: center;
+    transition: transform 0.2s linear;
+  }
+
+  .ico-reset-data {
+    @include absolute(10px, 18px);
+    font-weight: bold;
+  }
+}
+
+.select-dd--inner {
+  align-items: center;
+  display: flex;
+  min-height: inherit;
+  padding: 0 5px;
+  position: relative;
+  text-align: left !important;
+  z-index: 1;
+
+  .browser-ie & {
+    height: inherit;
+  }
+
+  span {
+    @include vm(inline-block);
+    flex: 1 1 auto;
+    font-size: $THEME-select-fz;
+    text-transform: $SELECT-transform;
+    width: $SELECT-width;
+    word-wrap: break-word;
+
+    &.-with-reset {
+      width: $SELECT-width;
+    }
+  }
+}
+
+.select-dd--list {
+  @extend .scroll;
+  @include absolute(100%, null, null, 0);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+  display: none;
+  list-style: none;
+  max-height: $THEME-select-maxheight;
+  overflow: {
+    x: hidden;
+    y: auto;
+  }
+  padding: 0;
+  transition: margin 0.2s ease;
+  width: 100%;
+  z-index: 100;
+
+  .is-open & {
+    display: block;
+  }
+
+  .is-inverted & {
+    bottom: calc(100% - 1px);
+    top: auto;
+  }
+
+  .select-list--filter & {
+    max-height: 500px;
+  }
+}
+
+.select-dd--list__items {
+  display: block;
+  padding: 7px;
+  position: relative;
+  text: {
+    align: left;
+    transform: capitalize;
+  }
+  transition: margin 0.2s ease;
+
+  .is-open & {
+    margin-top: 0 !important;
+  }
+}

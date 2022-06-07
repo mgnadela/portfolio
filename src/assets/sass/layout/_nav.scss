@@ -1,0 +1,109 @@
+.nav-wrap {
+  background-color: $THEME-base-bg;
+  font-size: 11px;
+  width: 100%;
+
+  @include breakpoint(767px, max-width) {
+    @include fixed(0, 0, 0, 0);
+    background-color: rgba(#000, 0.8);
+    transform: translateX(-100%);
+    transition: background 0.2s ease;
+    z-index: 99;
+  }
+
+  @include breakpoint(768px) {
+    display: flex;
+  }
+
+  &.is-show {
+    @include breakpoint(767px, max-width) {
+      transform: translateX(0);
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+
+  @include breakpoint(767px, max-width) {
+    background-color: #fff;
+    flex: 1 1 auto;
+    height: 100%;
+    max-width: 350px;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+  }
+
+  @include breakpoint(768px) {
+    width: 100%;
+  }
+
+  .is-show & {
+    @include breakpoint(767px, max-width) {
+      transform: translateX(0);
+    }
+  }
+}
+
+.nav__item {
+  background-color: #4294a2;
+  list-style: none;
+  position: relative;
+
+  &.is-active {
+    background-color: $THEME-base-bg;
+  }
+}
+
+.nav__main {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  min-height: 40px;
+  padding: 5px 25px;
+  position: relative;
+  position: relative;
+  text-transform: uppercase;
+  user-select: none;
+
+  > a {
+    @include absolute(0, 0, 0, 0);
+  }
+
+  i {
+    @include min-max-width(25px);
+    margin-right: 5px;
+    font-size: 15px;
+  }
+
+  .is-active & {
+    color: $THEME-base-accent1;
+  }
+}
+
+.nav-sub {}
+
+.nav-sub__item {
+  .nav__main {
+    padding-left: 56px;
+    min-height: 35px;
+
+    &:before {
+      @include vm(absolute, 50%);
+      @include wh(5px, 2px);
+      background-color: $transparent;
+      border-radius: 2px;
+      content: '';
+      display: block;
+      left: 44px;
+    }
+  }
+
+  &.is-active {
+    .nav__main:before {
+      background-color: $THEME-base-accent;
+    }
+  }
+}

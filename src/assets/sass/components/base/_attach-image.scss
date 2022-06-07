@@ -1,0 +1,65 @@
+.attach-image {
+  color: $THEME-attach-image-tx;
+  min-height: 180px;
+  position: relative;
+  width: 100%;
+
+  @include breakpoint(hoverable) {
+    color: lighten($THEME-attach-image-tx-hover, 10%);
+  }
+
+  input {
+    @include wh(0.1px, 0.1px);
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+
+    &:focus + label, & + label:hover {
+      border: 1.5px dashed lighten($THEME-attach-border, 10%);
+    }
+
+    &:focus + label {
+      outline: 1px dotted $THEME-attach-border-hover;
+      outline: -webkit-focus-ring-color auto 5px;
+    }
+  }
+
+  .btn-delete {
+    position: absolute !important;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+.attach-image__lbl {
+  align-items: center;
+  background: $THEME-attach-bg;
+  border: 1.5px dashed $THEME-attach-bg-border;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: inherit;
+  padding: 10px;
+  width: 100%;
+
+  .ico-no-image {
+    font-size: 100px;
+    margin-bottom: 5px;
+  }
+
+  span {
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+}
+
+.attach-image__preview {
+  max: {
+    height: 100%;
+    width: 100%;
+  }
+  margin-right: 0;
+  width: auto;
+}

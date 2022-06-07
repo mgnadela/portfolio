@@ -1,0 +1,39 @@
+.header {
+  $THEME-bg: #cdcdcd;
+  $THEME-border: #bbbbbb;
+  $THEME-tx: #333;
+
+  background-color: $THEME-bg;
+  border-bottom: solid 1px $THEME-border;
+  color: $THEME-tx;
+
+  @include breakpoint(992px) {
+    height: 70px;
+    position: relative;
+    z-index: 4;
+  }
+}
+
+.header__item {
+  $THEME-border: #181c25;
+  position: relative;
+
+  &:after {
+    $THEME-bg: #2c2f3d;
+
+    background-color: $THEME-bg;
+  }
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  > a {
+    @include absolute(0, 0, 0, 0);
+  }
+}
+
+.header-sub__lbl {
+  color: #ffba27;
+}
+.header-sub__amount {}

@@ -1,0 +1,64 @@
+$ico-add: "\e901";
+$ico-alert-error: "\e92a";
+$ico-alert-prompt: "\e923";
+$ico-alert-success: "\e928";
+$ico-alert-warning: "\e927";
+$ico-all: "\e92c";
+$ico-arrow-animate-down: "\ea36";
+$ico-arrow-animate-up: "\ea32";
+$ico-arrow-full: "\e934";
+$ico-arrow-line: "\e936";
+$ico-calendar: "\e911";
+$ico-clear: "\e920";
+$ico-clients: "\e90b";
+$ico-close-thin: "\e90a";
+$ico-close: "\ea0f";
+$ico-default: "\e900";
+$ico-delete: "\e93d";
+$ico-double-arrow: "\e905";
+$ico-edit: "\e90d";
+$ico-empty: "\e929";
+$ico-hamburger: "\e92b";
+$ico-info: "\e906";
+$ico-lock: "\e935";
+$ico-logout: "\e91d";
+$ico-message: "\e916";
+$ico-nav-profile: "\e92d";
+$ico-no-image: "\e93c";
+$ico-notice: "\e91a";
+$ico-orders: "\e909";
+$ico-password-key: "\e922";
+$ico-refresh: "\e915";
+$ico-save: "\e908";
+$ico-search-clear: "\e907";
+$ico-search: "\e91c";
+$ico-star: "\e9d9";
+$ico-unread: "\e926";
+$ico-volume-in: "\e112";
+$ico-volume-out: "\e111";
+
+[class^="ico-"],
+.ico-default {
+  @include vm(inline-block);
+  font: {
+    family: 'icomoon' !important;
+    style: normal !important;
+    variant: normal;
+    transform: none;
+    size: 23px;
+    weight: normal;
+  }
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &:before {
+    background: {
+      position: center center;
+      size: contain;
+      repeat: no-repeat;
+    }
+    display: inline-block;
+  }
+}

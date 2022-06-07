@@ -1,0 +1,60 @@
+.swal2-container.swal2-shown {
+  background-color: rgba(#e9ecf0, 0.4);
+}
+
+.swal2-popup {
+  $THEME-bg: #ffffff;
+  $THEME-border: #e2e2e2;
+
+  background-color: $THEME-bg;
+  border: solid 1px $THEME-border;
+
+  .swal2-confirm {
+    background-color: #6f9c50;
+
+    span {
+      color: #202430;
+    }
+  }
+
+  .swal2-cancel {
+    background-color: #af5852;
+    margin-top: 5px;
+
+    span {
+      color: #202430;
+    }
+  }
+}
+
+.swal__header {
+  .swal--prompt & {
+    color: #cd6d48;
+  }
+
+  .swal--error & {
+    color: #ad2a2e;
+  }
+
+  .swal--success & {
+    color: #6f9c50;
+  }
+
+  .swal--warning & {
+    color: #d6ac35;
+  }
+}
+
+.swal__title {
+  h2 {
+    $THEME-tx: $THEME-base-color;
+
+    color: $THEME-tx;
+  }
+}
+
+.swal__body {
+  $THEME-tx: $THEME-base-color;
+
+  color: $THEME-tx;
+}

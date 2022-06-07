@@ -1,0 +1,36 @@
+.ui-widget select {
+	background-color: $calendar_select_bg;
+	border: 1px solid darken($calendar_select_bg, 10%);
+	color: $calendar_select_tx;
+}
+
+.ui-widget.ui-widget-content {
+	border: $datepicker_border;
+}
+
+.ui-widget-content {
+	background: $datepicker_bg;
+	color: $calendar_date_button_tx;
+}
+
+.ui-widget-content a { color: $calendar_date_button_tx; }
+
+.ui-widget-header {
+	background: $datepicker_bg;
+	color: $calendar_date_button_tx;
+}
+
+.ui-widget-header a {	color: $calendar_date_button_tx; }
+
+/* Interaction states
+----------------------------------*/
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+.ui-button.ui-state-disabled:hover,
+.ui-button.ui-state-disabled:active {
+	background: $calendar_date_button_bg;
+	border: $calendar_date_button_border;
+	color: $calendar_date_button_tx;
+}

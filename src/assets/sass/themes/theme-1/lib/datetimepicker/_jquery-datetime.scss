@@ -1,0 +1,200 @@
+%calendar_td_current {
+  box-shadow: rgba(#000, 0.8) 0 1px 3px 0 inset;
+	background: $calendar_current_bg;
+	color: $calendar_current_tx !important;
+	font-weight: 700;
+
+	&:hover {
+    box-shadow: rgba(#000, 0.8) 0 1px 3px 0 inset !important;
+		background: $calendar_current_bg_hover !important;
+		color: $calendar_current_tx_hover !important;
+	}
+}
+
+%calendar_td_today {
+  box-shadow: rgba(#000,0.8) 0 1px 3px 0 inset !important;
+	background: $calendar_today_bg !important;
+	color: $calendar_today_tx;
+
+	&:hover {
+    box-shadow: rgba(#000,0.8) 0 1px 3px 0 inset !important;
+		background: $calendar_today_bg_hover !important;
+		color: $calendar_today_tx_hover !important;
+	}
+
+	&.xdsoft_disabled, 	&.xdsoft_disabled:hover {
+		box-shadow: none !important;
+	}
+}
+
+%calendar_disabled {
+	background-color: $calendar_disabled_bg !important;
+	color: $calendar_disabled_tx;
+
+	@include breakpoint(hoverable) {
+		box-shadow: inherit;
+		background: $calendar_disabled_bg_hover !important;
+		color: $calendar_disabled_tx_hover !important;
+		cursor: not-allowed;
+	}
+}
+
+%calendar_disabled_other_month {
+	opacity: 0.8;
+	background-color: $calendar_other_month_disabled_bg !important;
+	color: $calendar_other_month_disabled_tx !important;
+	cursor: not-allowed !important;
+}
+
+.xdsoft_datetimepicker {
+	box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.506);
+	background: $datepicker_bg;
+	border: $datepicker_border;
+	color: #333;
+}
+
+.xdsoft_timepicker {
+	.xdsoft_time_box {
+		border: $timepicker_border;
+
+		> div > div {
+			background: $timepicker_bg;
+			border-top: $timepicker_border;
+			color: $timepicker_tx;
+			font-family: $timepicker_tx_font;
+
+			&.xdsoft_current {
+				@extend %calendar_td_current;
+			}
+		}
+	}
+}
+
+.xdsoft_time_box {
+	border: 1px solid #ccc;
+
+	> div > div {
+		&:hover {
+			background: $timepicker_bg_hover !important;
+			color: $timepicker_tx_hover !important;
+		}
+
+		&.xdsoft_disabled {
+			@extend %calendar_disabled;
+		}
+	}
+}
+
+.xdsoft_scrollbar {
+	.xdsoft_scroller {
+		background: $calendar_scroller_bg !important;
+	}
+}
+
+.xdsoft_label i, .xdsoft_prev, .xdsoft_next, .xdsoft_today_button {
+	background-image: url($calendar_icons_dark);
+}
+
+.xdsoft_label {
+	color: $datepicker_label;
+
+	> .xdsoft_select {
+		background: $calendar_select_bg;
+		border: $calendar_select_border;
+
+		> div > .xdsoft_option {
+			@include breakpoint(hoverable) {
+				background: $calendar_select_bg_hover;
+				color: #fff;
+			}
+
+			&.xdsoft_current {
+				background: $calendar_select_bg_current_bg;
+				color: $calendar_select_bg_current_tx;
+			}
+		}
+	}
+}
+
+.xdsoft_calendar {
+	td {
+		background: $calendar_td_bg;
+		color: $calendar_td_tx;
+		border: $calendar_border;
+
+		@include breakpoint(hoverable) {
+			background: $calendar_td_bg_hover;
+			color: $calendar_td_tx_hover;
+		}
+
+		&.xdsoft_today {
+			@extend %calendar_td_today;
+
+			&.xdsoft_current {
+				box-shadow: rgba(#000,0.5) 0 1px 3px 0 inset;
+				background: $calendar_today_bg;
+			}
+		}
+
+		&.xdsoft_highlighted_default {
+			box-shadow: #ffb871 0 1px 4px 0 inset;
+			background: #ffe9d2;
+			color: #000;
+		}
+
+		&.xdsoft_highlighted_mint {
+			box-shadow: #00dd1c 0 1px 4px 0 inset;
+			background: #c1ffc9;
+			color: #000;
+		}
+
+		&.xdsoft_default,
+		&.xdsoft_current {
+			@extend %calendar_td_current;
+		}
+
+		&.xdsoft_other_month {
+			background-color: $calendar_other_month_bg;
+			color: $calendar_other_month_tx;
+
+			&:hover {
+				background-color: $calendar_other_month_bg_hover !important;
+				color: $calendar_other_month_tx_hover;
+			}
+
+			&.xdsoft_disabled,
+			&.xdsoft_disabled:hover {
+				@extend %calendar_disabled_other_month;
+			}
+		}
+
+		&.xdsoft_disabled {
+			@extend %calendar_disabled;
+		}
+	}
+
+	th {
+		border: $calendar_th_border;
+		background: $calendar_th_bg;
+		color: $calendar_th_tx;
+	}
+}
+
+.blue-gradient-button {
+	background-image: linear-gradient(to top, #fff 0, #f4f8fa 73%);
+	border: 1px solid #d7d8da;
+	color: #82878c;
+	font: {
+		family: "museo-sans", "Book Antiqua", sans-serif;
+		size: 12px;
+		weight: 300;
+	}
+	height: 28px;
+	padding: 4px 17px 4px 33px;
+	position: relative;
+
+	&:hover, &:hover span, &:focus, &:focus span  {
+		background-image: linear-gradient(to top, #f4f8fa 0, #FFF 73%);
+		color: #454551;
+	}
+}

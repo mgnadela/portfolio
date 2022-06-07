@@ -1,0 +1,13 @@
+.modal-inner {
+  $THEME-bg: #ffffff;
+  $THEME-border: #e2e2e2;
+
+  background-color: $THEME-bg;
+  border: 1px solid $THEME-border;
+}
+
+.modal__title {
+  $THEME-tx: $THEME-base-color;
+
+  color: $THEME-tx;
+}

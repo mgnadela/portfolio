@@ -1,0 +1,13 @@
+.tooltip {
+  $THEME-bg: #fcba27;
+  $THEME-tx: #fcba27;
+
+  background-color: $THEME-bg;
+  color: $THEME-tx;
+
+  span {
+    $THEME-tx: #fff;
+
+    color: $THEME-tx;
+  }
+}

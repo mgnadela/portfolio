@@ -1,0 +1,165 @@
+.ico-default {
+  &:before {
+    content: $ico-default;
+  }
+}
+
+.ico-alert-prompt {
+  &:before {
+    content: $ico-alert-prompt;
+  }
+}
+
+.ico-alert-error {
+  &:before {
+    content: $ico-alert-error;
+  }
+}
+
+.ico-alert-success {
+  &:before {
+    content: $ico-alert-success;
+  }
+}
+
+.ico-alert-warning {
+  &:before {
+    content: $ico-alert-warning;
+  }
+}
+
+.ico-popup-close,
+.ico-close {
+  &:before {
+    content: $ico-close;
+  }
+}
+
+.ico-arrow-line {
+  &:before {
+    content: $ico-arrow-line;
+  }
+}
+
+.ico-arrow-full {
+  &,
+  &-up,
+  &-down,
+  &-right,
+  &-left {
+    font-size: 6px;
+    transform-origin: center;
+
+    &:before {
+      content: $ico-arrow-full;
+    }
+  }
+
+  &-down {
+    transform: rotate(180deg);
+  }
+
+  &-right {
+    transform: rotate(90deg);
+  }
+
+  &-left {
+    transform: rotate(-90deg);
+  }
+}
+
+.ico-arrow-tail {
+  &,
+  &-up,
+  &-down,
+  &-right,
+  &-left {
+    transform-origin: center;
+
+    &:before {
+      content: $ico-arrow-animate-up;
+    }
+  }
+
+  &-down {
+    transform: rotate(180deg);
+  }
+
+  &-right {
+    transform: rotate(90deg);
+  }
+
+  &-left {
+    transform: rotate(-90deg);
+  }
+}
+
+.ico-no-image {
+  &:before {
+    content: $ico-no-image;
+    display: block;
+  }
+}
+
+.ico-refresh {
+  &:before {
+    content: $ico-refresh;
+    display: block;
+  }
+}
+
+.ico-search {
+  &:before {
+    content: $ico-search;
+    display: block;
+  }
+}
+
+.ico-search-clear {
+  &:before {
+    content: $ico-search-clear;
+    display: block;
+  }
+}
+
+.ico-calendar {
+  &:before {
+    content: $ico-calendar;
+    display: block;
+  }
+}
+
+.ico-empty-data {
+  &:before {
+    content: $ico-empty;
+    display: block;
+  }
+}
+
+.ico-save {
+  &:before {
+    content: $ico-save;
+    display: block;
+  }
+}
+
+.ico-edit {
+  &:before {
+    content: $ico-edit;
+    display: block;
+  }
+}
+
+.ico-delete {
+  &:before {
+    content: $ico-delete;
+    display: block;
+  }
+}
+
+.ico-add {
+  &:before {
+    content: $ico-add;
+    display: block;
+  }
+}

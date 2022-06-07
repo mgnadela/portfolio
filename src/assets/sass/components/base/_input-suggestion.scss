@@ -1,0 +1,78 @@
+.input-suggestion {
+  @include min-max-width($THEME-input-suggestion-width);
+  position: relative;
+  display: inline-flex;
+
+  .input-wrap {
+    width: 100%;
+    min-width: 100%;
+
+    input {
+      padding-right: 35px;
+    }
+  }
+
+  .ico-close {
+    @include absolute(50%, 6px);
+    transform: translateY(-50%);
+    color: $THEME-input-suggestion-reset;
+    font: {
+      size: 9px;
+      weight: bold;
+    }
+
+    @include breakpoint(hoverable) {
+      color: darken($THEME-input-suggestion-reset, 2%);
+    }
+  }
+
+  .loader-wrap {
+    @include vm(absolute, 50%);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: auto;
+    right: 0;
+    width: 20px;
+
+    &:after {
+      @include wh(10px, 10px);
+      border-width: 2px;
+      position: static;
+    }
+  }
+}
+
+.input-suggestion-list {
+  @extend .scroll;
+  @include min-max-width($THEME-input-suggestion-width);
+  // @include absolute(0);
+  @include fixed(0);
+  background-color: $THEME-input-suggestion-bg;
+  border-radius: 3px;
+  border: solid 1px $THEME-input-suggestion-border;
+  max-height: 145px;
+  overflow: auto;
+  width: 100%;
+  z-index: 99;
+}
+
+.input-suggestion-list__inner {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  min-height: 27px;
+  padding: 3px;
+
+  &.is-active {
+    background-color: $THEME-input-suggestion-bg-active;
+  }
+
+  @include breakpoint(hoverable) {
+    background-color: darken($THEME-input-suggestion-bg, 2%);
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $THEME-input-suggestion-border;
+  }
+}

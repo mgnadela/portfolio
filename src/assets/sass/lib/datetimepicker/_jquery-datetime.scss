@@ -1,0 +1,428 @@
+.xdsoft_datetimepicker {
+	display: none;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding: 2px 8px 8px 0px;
+	z-index: 9999;
+  position: absolute;
+
+  // top: 0;
+  // display: block;
+  // left: 0;
+
+	@include breakpoint((320px, 359px)) {
+    left: 6px !important;
+  }
+
+	* {
+		box-sizing: border-box;
+		padding: 0;
+		margin: 0;
+	}
+
+	iframe {
+		@include absolute(0, null, null, 0);
+		@include wh(75px, 210px);
+		background: transparent;
+		border: 0;
+	}
+
+	button {
+		border: none !important;
+	}
+}
+
+.xdsoft_rtl {
+	padding: 8px 0 8px 8px;
+}
+
+.xdsoft_inline {
+	box-shadow: none;
+	display: inline-block;
+	position: static;
+}
+
+.xdsoft_noselect {
+	user-select: none;
+	-webkit-touch-callout: none;
+
+	&::selection,
+	&::-moz-selection {
+		background: transparent;
+	}
+}
+
+.xdsoft_datepicker,
+.xdsoft_timepicker {
+	display: none;
+
+	&.active {
+		display: block;
+	}
+}
+
+.xdsoft_datepicker {
+	float: left;
+	margin-left: 8px;
+	width: 224px;
+
+	&.active + .xdsoft_timepicker {
+		margin: {
+			top: 8px;
+			bottom: 3px;
+		}
+	}
+
+	.xdsoft_rtl & {
+		float: right;
+		margin: {
+			left: 0;
+			right: 8px;
+		}
+	}
+
+	.xdsoft_showweeks & {
+		width: 256px;
+	}
+}
+
+.xdsoft_timepicker {
+	float: left;
+	margin: {
+		left: 8px;
+		top: 0;
+	}
+	text-align: center;
+	width: 58px;
+
+	.xdsoft_rtl & {
+		float: right;
+		margin: {
+			right: 8px;
+			left: 0;
+		}
+	}
+
+	.xdsoft_time_box {
+		height: 151px;
+		overflow: hidden;
+
+		> div > div {
+			border: {
+				bottom-width: 0;
+				collapse: collapse;
+			}
+			cursor: pointer;
+			font-size: 13px;
+			height: 25px;
+			line-height: 25px;
+			text-align: center;
+		}
+	}
+}
+
+.xdsoft_time_box {
+	position: relative;
+
+	> div > div {
+		&:hover {
+			box-shadow: none !important;
+		}
+	}
+}
+
+.xdsoft_scrollbar {
+	@include absolute(0, 0, 0);
+	cursor: pointer;
+	width: 7px;
+
+	.xdsoft_rtl & {
+		left: 0;
+		right: auto;
+	}
+
+	.xdsoft_scroller {
+		border-radius: 3px;
+		height: 20px;
+	}
+
+	.xdsoft_scroller_box {
+		position: relative;
+	}
+}
+
+.xdsoft_monthpicker {
+	position: relative;
+	text-align: center;
+}
+
+.xdsoft_label i,
+.xdsoft_prev,
+.xdsoft_next,
+.xdsoft_today_button {
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.xdsoft_label {
+	background-color: transparent;
+	cursor: pointer;
+	display: inline;
+	float: left;
+	font: {
+		size: 14px;
+		width: bold;
+	}
+	line-height: 20px;
+	margin: 0;
+	padding: 5px 3px;
+	position: relative;
+	text-align: center;
+	width: 182px;
+	z-index: 9999;
+
+	&:hover {
+		> span {
+			text-decoration: underline;
+		}
+
+		i {
+			opacity: 1;
+		}
+	}
+
+	span {
+		font: {
+			family: $FMAIN;
+			weight: bold;
+		}
+	}
+
+	i {
+		@include wh(9px, 20px);
+		transition: all 0.36s ease;
+		opacity: 0.5;
+		background-position: -92px -19px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	> .xdsoft_select {
+		@include absolute(30px, 0);
+		display: none;
+		max-height: 160px;
+		overflow-y: hidden;
+		z-index: 101;
+
+		&.xdsoft_monthselect {
+			right: -7px;
+		}
+
+		&.xdsoft_yearselect {
+			right: 2px;
+		}
+
+		> div > .xdsoft_option {
+			padding: 2px 10px 2px 5px;
+			text-decoration: none !important;
+
+			@include breakpoint(hoverable) {
+				color: #fff;
+			}
+
+			&.xdsoft_current {
+				box-shadow: rgba(#000, 0.3) 0 1px 3px 0 inset;
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+.xdsoft_today_button,
+.xdsoft_prev,
+.xdsoft_next {
+	@include wh(20px, 30px);
+	opacity: 0.5;
+	background: {
+		color: transparent;
+		repeat: no-repeat;
+	}
+	border: 0 none;
+	cursor: pointer;
+	display: block;
+	min-width: 0;
+	outline: medium none;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	text-indent: 100%;
+	white-space: nowrap;
+}
+
+.xdsoft_today_button {
+	background-position: -70px 0;
+	float: left;
+	margin-left: 5px;
+}
+
+.xdsoft_prev,
+.xdsoft_next {
+	.xdsoft_timepicker & {
+		@include wh(30px, 15px);
+		background-position: -40px -15px;
+		display: block;
+		float: none;
+		margin: {
+			left: 14px;
+			top: 7px;
+		}
+	}
+
+	.xdsoft_rtl .xdsoft_timepicker & {
+		float: none;
+		margin: {
+			left: 0;
+			right: 14px;
+		}
+	}
+}
+
+.xdsoft_prev {
+	background-position: -20px 0;
+	float: left;
+
+	.xdsoft_timepicker & {
+		background-position: -40px 0;
+		margin: {
+			bottom: 7px;
+			top: 0;
+		}
+	}
+}
+
+.xdsoft_next {
+	background-position: 0 0;
+	float: right;
+}
+
+.xdsoft_month {
+	text-align: right;
+	width: 100px;
+}
+
+.xdsoft_calendar {
+	clear: both;
+
+	.month-picker & {
+	 	display: none !important;
+	}
+
+	table {
+		border-collapse: collapse;
+		width: 100%;
+	}
+
+	td, th {
+		@include wh(14.2857142%, 25px);
+		border-collapse: collapse;
+		cursor: pointer;
+		font-size: 12px;
+		padding: 0;
+		text-align: right;
+		vertical-align: middle;
+
+		.xdsoft_showweeks & {
+			width: 12.5%;
+		}
+	}
+
+	td {
+		transition: all 0.36s ease;
+
+		@include breakpoint(hoverable) {
+			box-shadow: none;
+		}
+
+		> div {
+			font-family: $datepicker_td_tx_font;
+			padding-right: 5px;
+		}
+
+		&.xdsoft_default,
+		&.xdsoft_current {
+			&.xdsoft_disabled {
+				box-shadow: none !important;
+			}
+		}
+
+		&.xdsoft_other_month {
+			transition: all 0.36s ease;
+			opacity: 0.8;
+
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+
+	th {
+		cursor: default;
+		font: {
+			family: $datepicker_th_tx_font;
+			size: 11px;
+			weight: 700px;
+		}
+		height: 25px;
+		text: {
+			align: center;
+			transform: uppercase;
+		}
+	}
+}
+
+.xdsoft_year {
+	margin-left: 5px;
+	width: 48px;
+}
+
+.xdsoft_copyright {
+	clear: both;
+	color: #ccc !important;
+	float: none;
+	font-size: 10px;
+	margin-left: 8px;
+
+	a {
+		color: #eee !important;
+
+		&:hover { color: #aaa !important; }
+	}
+}
+
+.xdsoft_save_selected {
+	border: 1px solid #ddd !important;
+	color: #454551;
+	display: block;
+	font-size: 13px;
+	margin-top: 5px;
+	width: 100%;
+}
+
+.blue-gradient-button {
+	background-image: linear-gradient(to top, #fff 0, #f4f8fa 73%);
+	border: 1px solid #d7d8da;
+	color: #82878c;
+	font: {
+		family: "museo-sans", "Book Antiqua", sans-serif;
+		size: 12px;
+		weight: 300;
+	}
+	height: 28px;
+	padding: 4px 17px 4px 33px;
+	position: relative;
+
+	&:hover, &:hover span, &:focus, &:focus span  {
+		background-image: linear-gradient(to top, #f4f8fa 0, #FFF 73%);
+		color: #454551;
+	}
+}

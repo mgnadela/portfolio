@@ -1,0 +1,26 @@
+.data-loading {
+  opacity: 0.4;
+
+  &:before {
+    @include vm(absolute, 50%, 50%);
+    @include wh(50px, 50px);
+    animation: loading 1.2s linear infinite;
+    border-radius: 100%;
+    border-top-color: rgba(0,0,0,0.3);
+    border: 5px solid #fff;
+    content: '';
+    display: block;
+    opacity: 0.6;
+    z-index: 1;
+  }
+
+  @keyframes loading {
+    0% {
+      transform:rotate(0deg);
+    }
+
+    100% {
+      transform:rotate(360deg);
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.btn-test {
+  @include fixed(50%, null, null, 50%);
+  @include wh(100px, 100px);
+  transform: translate(-50%, 50%);
+  position: fixed !important;
+  z-index: 9999;
+}

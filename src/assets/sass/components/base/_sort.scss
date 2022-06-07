@@ -1,0 +1,27 @@
+.sorter-wrap {
+  cursor: pointer;
+  padding: 4px !important;
+}
+
+.sort {
+  @include wh(6px, 10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .ico-sort-asc {
+    @include triangle(t, 3px, $THEME-sort-bg);
+
+    &.is-active {
+      @include triangle(t, 3px, $THEME-sort-bg-active);
+    }
+  }
+
+  .ico-sort-desc {
+    @include triangle(b, 3px, $THEME-sort-bg);
+
+    &.is-active {
+      @include triangle(b, 3px, $THEME-sort-bg-active);
+    }
+  }
+}

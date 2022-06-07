@@ -1,0 +1,22 @@
+// .pagination {
+//   li {
+//     background-color: $THEME-pagination-bg;
+//     border-radius: 3px;
+//     color: $THEME-pagination-text;
+//
+//     &:not(.active) {
+//       @include breakpoint(hoverable) {
+//         background-color: $THEME-pagination-bg-hover;
+//         color: $THEME-pagination-text-hover;
+//       }
+//     }
+//
+//     &.is-active {
+//       $THEME-bg: #d4991b;
+//       $THEME-tx: #fff;
+//
+//       background-color: $THEME-pagination-bg-active;
+//       color: $THEME-pagination-text-active;
+//     }
+//   }
+// }

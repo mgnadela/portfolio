@@ -1,0 +1,62 @@
+[class^="btn-"] {
+  @extend %btn;
+
+  &:disabled {
+    background-color: #b8b8b8 !important;
+    border: 1px solid #9e9e9e !important;
+    color: #707070 !important;
+    cursor: not-allowed !important;
+  }
+
+  &:not(:disabled):not(.btn-popup-close):not(.btn-playnow):not(.btn-playnow__inner):not(.btn-next):not(.btn-prev):not(.btn-betting-cart):not(.btn-volume):not(.btn-transparent) {
+    @extend %ripple;
+  }
+}
+
+%btn {
+  align-items: center;
+  border-radius: 5px;
+  display: inline-flex;
+  font-family: $FMAIN;
+  font-size: 9px;
+  height: 30px;
+  padding: 0 5px;
+  text-transform: capitalize;
+  transition: 0.3s ease-out;
+
+  @include breakpoint(768px) {
+    font-size: 10px;
+  }
+
+  @include breakpoint(1200px) {
+    font-size: 12px;
+  }
+
+  span,
+  i {
+    @include vm(inline-block);
+  }
+
+  span {
+    font: {
+      weight: bold;
+      size: inherit;
+    }
+    text-transform: uppercase;
+  }
+
+  i {
+    color: inherit;
+    display: inline-flex;
+    vertical-align: middle;
+    font-size: 13px;
+
+    @include breakpoint(501px) {
+      font-size: 18px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+}

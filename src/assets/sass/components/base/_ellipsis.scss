@@ -1,0 +1,17 @@
+.ellipsis,
+.ellipsis-line {
+  position: relative;
+  overflow: hidden;
+}
+
+.ellipsis {
+  display: block;
+}
+
+.ellipsis-line {
+  display: inline-block;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}

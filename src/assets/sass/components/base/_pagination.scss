@@ -1,0 +1,56 @@
+.pagination {
+  text-align: right;
+  width: 100%;
+
+  .data-loading & {
+    opacity: 0.6;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    @extend %ellipsis;
+    @include wh(auto, 25px);
+    align-items: center;
+    background-color: $THEME-pagination-bg;
+    color: $THEME-pagination-text;
+    cursor: pointer;
+    display: inline-flex;
+    font-weight: bold;
+    justify-content: center;
+    margin: {
+      bottom: 6px;
+      top: 6px;
+    }
+    min-width: 25px;
+    padding: 0 4px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+
+    &:not(:first-child),
+    &:not(:last-child) {
+      margin-left: 5px;
+    }
+
+    &:not(.is-active) {
+      @include breakpoint(hoverable) {
+        background-color: $THEME-pagination-bg-hover;
+        color: $THEME-pagination-text-hover;
+      }
+    }
+
+    &.is-active {
+      cursor: default;
+      background-color: $THEME-pagination-bg-active;
+      color: $THEME-pagination-text-active;
+    }
+
+    .modal & {
+      background-color: $THEME-pagination-modal-bg;
+      color: $THEME-pagination-modal-tx;
+    }
+  }
+}

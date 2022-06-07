@@ -1,0 +1,63 @@
+.main {
+  display: flex;
+  flex: 1 1 auto;
+  overflow: hidden;
+  width: 100%;
+
+  @include breakpoint(767px, max-width) {
+    flex-direction: column;
+  }
+}
+
+.main-sidebar {
+  background-color: $THEME-base-accent;
+  color: #fff;
+  width: 100%;
+
+  @include breakpoint(768px) {
+    max-width: 200px;
+  }
+}
+
+.main-body {
+  @extend .scroll;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  overflow: auto;
+  height: 100%;
+  padding: 5px;
+
+  @include breakpoint(992px) {
+    padding: 10px;
+  }
+}
+
+.main-body-inner {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main__toolbar {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  button {
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+}
+
+.main__contents {
+  @extend .scroll;
+  flex: 1 1 auto;
+  padding: 5px;
+
+  @include breakpoint(768px) {
+    overflow: auto;
+  }
+}

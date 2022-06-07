@@ -1,0 +1,53 @@
+.marquee-wrap {
+  @include wh(100%, inherit);
+  @include relative(null, null, null, 0);
+  align-items: center;
+  display: flex;
+  font-size: 12px;
+  justify-content: space-between;
+  margin: 0 auto;
+
+  @include breakpoint(550px, max-width) {
+    width: 100% !important;
+  }
+
+  @include breakpoint(768px) {
+    display: flex;
+    width: 95%;
+  }
+
+  @include breakpoint(992px) {
+    width: 90%;
+  }
+
+  @include breakpoint(1300px) {
+    width: 80%;
+  }
+
+  .ico-notice {
+    font-size: 13px;
+
+    @include breakpoint(992px) {
+      font-size: 14px;
+    }
+  }
+}
+
+.marquee {
+  @include wh(auto, inherit);
+  align-items: center;
+  border-radius: 3px;
+  clear: both;
+  cursor: pointer;
+  display: flex;
+  flex: 1 1 auto;
+  margin-left: 5px;
+  overflow: hidden;
+  padding: 5px;
+  white-space: nowrap;
+}
+
+.marquee-text-text {
+  white-space: nowrap;
+  display: flex;
+}

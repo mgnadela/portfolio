@@ -1,0 +1,44 @@
+.searchbar {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+
+  .select-list {
+    min-height: 30px;
+    margin-top: -1px;
+  }
+
+  .input-wrap {
+    min-height: 32px;
+    margin-top: -1px;
+  }
+
+  .btn-refresh,
+  .btn-search,
+  .btn-search-clear {
+    $THEME-bg: #c9dee1;
+    $THEME-tx: $THEME-base-accent;
+    $THEME-border: #aecfd4;
+
+    background-color: $THEME-bg;
+    border: 1px solid $THEME-border;
+    color: $THEME-tx;
+
+    @include breakpoint(hoverable) {
+      background-color: darken($THEME-bg, 4%);
+    }
+  }
+}
+
+.searchbar__item {
+  button {
+    &:not(:last-child) {
+      margin-right: 3px;
+    }
+  }
+}
+
+.searchbar--actions {
+  display: flex;
+  align-items: center;
+}

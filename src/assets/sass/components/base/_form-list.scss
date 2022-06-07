@@ -1,0 +1,91 @@
+.form-list {
+  font-size: 12px;
+
+  .input-wrap,
+  .form-list__display {
+    min-height: 27px;
+  }
+}
+
+.form-list__head {
+  background-color: $THEME-form-list-head-bg;
+  border-radius: $THEME-form-list-head-radius;
+  border: $THEME-form-list-head-border;
+  display: flex;
+  padding: 5px;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &.is-column {
+    background: red;
+    flex-direction: column;
+  }
+}
+
+.form-list__body {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.form-list__footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-list-layer {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+
+  .form-list__head.is-column & {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  .form-list__head:not(.is-column) & {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}
+
+.form-list__item {
+  display: flex;
+
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}
+
+
+.form-list__lbl {
+  min-width: 100px;
+  padding-top: 8px;
+
+  &:not(:last-child) {
+    margin-right: 5px;
+  }
+}
+
+.form-list__data {
+  flex: 1 1 auto;
+
+  .input-wrap {
+    @include min-max-width(100%);
+  }
+}
+
+.form-list__display {
+  align-items: center;
+  background-color: darken($THEME-input-bg, 5%);
+  border-radius: 5px;
+  border: 1px solid darken($THEME-input-border, 5%);
+  color: darken($THEME-input-tx, 5%);
+  display: flex;
+  min-height: 30px;
+  padding: 0 10px;
+}

@@ -1,0 +1,15 @@
+.empty-list {
+  $THEME-tx: #9a9aad;
+
+  color: $THEME-tx;
+}
+
+.loader-wrap {
+  &:after {
+    $THEME-border: #fff;
+    $THEME-border-top: rgba(0, 0, 0, 0.3);
+
+    border: 5px solid $THEME-border;
+    border-top-color: $THEME-border-top;
+  }
+}
